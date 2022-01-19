@@ -29,8 +29,12 @@ const inputTexto = document.getElementById("input-texto");
 const msg = document.getElementById("msg");
 //funciones
 function encriptar(texto) {
+ //VALIDAR QUE SOLO SE INGRESE LETRAS MINUSCULAS Y NO ACENTUACION
+    if (texto.match(/[^a-z]/)) {
+        return alert("Solo se permiten letras minusculas y sin acentos");
+    }
     let textoEncriptado = "";
-    for (let i = 0; i < texto.length; i++) {
+        for (let i = 0; i < texto.length; i++) {
         let letra = texto[i];
         switch (letra) {
         case "e":
