@@ -62,7 +62,7 @@ function encriptar(texto) {
 
 function desencriptar(texto) {
   if (texto.match(/[^a-z]/)) {
-        return alert("Solo se permiten letras minusculas y no acentuacion");
+        return alert("Solo se permiten letras minusculas y sin acentos");
     }
      let textoDesencriptado = "";
       for (let i = 0; i < texto.length; i++) {
